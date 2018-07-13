@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+
+</head>
+<body>
+	<header th:replace="layout :: header"></header>
+	<div class="container">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Content</th>
+					<th>Create_time</th>
+					<th>Last_update</th>
+					<th>Status</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="topic,iterStat : ${topics}">
+					<td></td>
+					<td th:text="${topic.title}"></td>
+					<td th:text="${topic.description}"></td>
+					<td th:text="${topic.content}"></td>
+					<td th:text="${topic.createTime}"></td>
+					<td th:text="${topic.lastUpdated}"></td>
+					<td th:text="${topic.status}"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<footer th:replace="layout :: footer"></footer>
+	<!-- <script type="text/javascript" th:src="@{/js/user/test.js}"></script> -->
+</body>
+</html>
