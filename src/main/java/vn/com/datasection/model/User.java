@@ -70,7 +70,13 @@ public class User implements Serializable {
 		this.expireTime = expireTime;
 		this.enable = enable;
 	};
-
+	
+	public User(String email, String password, boolean enable) {
+		this.email=email;
+		this.password=password;
+		this.enable=enable;
+	}
+	
 	public int getId() {
 		return this.id;
 	}

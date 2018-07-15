@@ -6,4 +6,6 @@ public interface UserService {
 	public void save(User user);
 
 	public User findUserByEmail(String email);
+	
+	public User findUserById(int id);
 }

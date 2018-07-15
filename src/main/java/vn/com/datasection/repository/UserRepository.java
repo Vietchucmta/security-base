@@ -6,4 +6,6 @@ import vn.com.datasection.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 	User findByEmail(String email) throws RuntimeException;
+	
+	public User findUserById(int id) throws RuntimeException;
 }

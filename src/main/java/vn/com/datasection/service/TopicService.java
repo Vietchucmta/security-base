@@ -6,4 +6,6 @@ import vn.com.datasection.model.Topic;
 
 public interface TopicService {
 	public Iterable<Topic> findAll();
+	
+	public Topic findTopicById(int id);
 }

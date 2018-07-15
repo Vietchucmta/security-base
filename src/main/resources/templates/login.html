@@ -16,7 +16,7 @@
 		<div class="login-box-body">
 			<p class="login-box-msg">Sign in to start your BUSINEE</p>
 
-			<form th:action="@{/}" method="post">
+			<form th:action="@{/home}" method="post">
 				<div class="form-group has-feedback">
 					<input type="email" name="email" th:placeholder="Email"
 						class="form-control" placeholder="Username">
@@ -24,10 +24,6 @@
 				<div class="form-group has-feedback">
 					<input type="password" name="password" th:placeholder="Password"
 						class="form-control" placeholder="Password">
-				</div>
-				<div align="center" th:if="${param.error}">
-					<p style="font-size: 20; color: #FF1C19;">Email or Password
-						invalid, please verify</p>
 				</div>
 				<div class="row">
 					<!-- /.col -->
@@ -40,7 +36,12 @@
 			</form>
 			<!-- <a href="#">I forgot my password</a><br>  -->
 		</div>
-		<!-- /.login-box-body -->
+		
+		<div style="margin-top: 30px;">
+			<a th:href="@{/account/create}">Đăng ký</a>
+		</div>
+		
 	</div>
+
 </body>
 </html>

@@ -3,7 +3,6 @@ package vn.com.datasection.controller;
 import java.util.Date;
 
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -58,4 +57,5 @@ public class UserController {
 			return "form";
 		}
 	}
+	
 }

@@ -10,7 +10,7 @@ import vn.com.datasection.repository.UserTopicRepository;
 import vn.com.datasection.service.UserTopicService;
 
 @Service("userTopicService")
-public class UserTopicServiceImpl implements UserTopicService{
+public class UserTopicServiceImpl implements UserTopicService {
 
 	@Autowired
 	private UserTopicRepository userTopicRepository;
@@ -19,6 +19,10 @@ public class UserTopicServiceImpl implements UserTopicService{
 	public List<UserTopic> findAll() {
 		return userTopicRepository.findAll();
 	}
-	
-	
+
+	@Override
+	public void save(UserTopic userTopic) {
+		userTopicRepository.save(userTopic);
+	}
+
 }
